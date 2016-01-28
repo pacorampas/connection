@@ -1,0 +1,14 @@
+<h1>Hola mundo conection</h1>
+<p id="type"></p>
+<script>
+  var typeLog = document.getElementById('type');
+
+  function changeHandler(e) {
+    // Handle change of connection type here.
+    console.log(navigator.connection.type);
+    typeLog.innerHTML += navigator.connection.type + ', '
+  }
+
+  // Register for event changes:
+  navigator.connection.ontypechange = changeHandler;
+</script>
